@@ -5,14 +5,6 @@ import java.util.Objects;
 import java.util.Stack;
 
 public class MyStack<T> {
-    private static class Node<T>{
-        private T value;
-        private Node<T> next;
-
-        public Node(T value) {
-            this.value = value;
-        }
-    }
 
     private Node<T> head;
     private int size;
@@ -89,6 +81,15 @@ public class MyStack<T> {
         }
         else {
             throw new EmptyStackException();
+        }
+    }
+
+    private static class Node<T>{
+        private T value;
+        private Node<T> next;
+
+        public Node(T value) {
+            this.value = value;
         }
     }
 }

@@ -3,14 +3,6 @@ package src.my_collections;
 import java.util.NoSuchElementException;
 
 public class MyQueue<T> {
-    private static class Node<T>{
-        private T value;
-        private Node<T> next;
-
-        public Node(T value) {
-            this.value = value;
-        }
-    }
 
     private Node<T> head;
     private Node<T> tail;
@@ -55,6 +47,15 @@ public class MyQueue<T> {
         }
         else {
             throw new NoSuchElementException("Queue is empty");
+        }
+    }
+
+    private static class Node<T>{
+        private T value;
+        private Node<T> next;
+
+        public Node(T value) {
+            this.value = value;
         }
     }
 }
